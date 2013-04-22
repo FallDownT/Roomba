@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="XboxController">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/XboxController.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
