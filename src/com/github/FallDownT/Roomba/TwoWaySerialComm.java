@@ -34,7 +34,7 @@ public class TwoWaySerialComm {
 
             if (commPort instanceof SerialPort) {
                 SerialPort serialPort = (SerialPort) commPort;
-                serialPort.setSerialPortParams(9600, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
+                serialPort.setSerialPortParams(115200, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
 
                 InputStream in = serialPort.getInputStream();
                 OutputStream out = serialPort.getOutputStream();
@@ -113,7 +113,7 @@ public class TwoWaySerialComm {
     public static void main(String[] args) {
         TwoWaySerialComm serialComm;
         try {
-            serialComm = new TwoWaySerialComm("COM3");
+            serialComm = new TwoWaySerialComm("COM11");
 
             // Test Code:
             // byte primitive is signed and has a range -128 < b < 127 inclusive
