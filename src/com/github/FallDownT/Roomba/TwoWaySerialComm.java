@@ -117,7 +117,11 @@ public class TwoWaySerialComm {
 
             // Test Code:
             // byte primitive is signed and has a range -128 < b < 127 inclusive
-            serialComm.writer.transmitByte((byte) 0);   // Send a 0x00 to the serial port
+            while (true) {
+                System.out.print("> ");
+                byte testByte = (byte) System.in.read();
+                serialComm.writer.transmitByte(testByte);   // Send a 0x00 to the serial port
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
