@@ -113,7 +113,7 @@ public class TwoWaySerialComm {
     public static void main(String[] args) {
         TwoWaySerialComm serialComm;
         try {
-            serialComm = new TwoWaySerialComm("COM11");
+            serialComm = new TwoWaySerialComm("/dev/cu.ECE5-COM0");
 
             // Test Code:
             // byte primitive is signed and has a range -128 < b < 127 inclusive
