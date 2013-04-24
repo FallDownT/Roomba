@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/TwoWaySerialComm.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/TwoWaySerialComm.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/XboxControllerJavadoc.url" afterPath="$PROJECT_DIR$/javadoc/XboxControllerJavadoc.url" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roomba.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366757471625" ignored="false" />
+    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366767425730" ignored="false" />
     <file path="/testClass.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366658985204" ignored="false" />
     <file path="/fragment.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366733033306" ignored="false" />
     <file path="/TwoWaySerialComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366739720185" ignored="false" />
     <file path="/BlueCoveComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366766980975" ignored="false" />
-    <file path="/RoombaMain.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366767089978" ignored="false" />
+    <file path="/RoombaMain.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366767947852" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +74,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoombaMain.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RoombaMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="250" selection-end="250" vertical-scroll-proportion="0.33678755">
+            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,11 +94,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlueCoveComm.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BlueCoveComm.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="29" column="5" selection-start="758" selection-end="758" vertical-scroll-proportion="0.7512953">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,6 +193,20 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Roomba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Roomba" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -243,6 +258,11 @@
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javadoc" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TwoWaySerialComm">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -401,7 +421,11 @@
       <created>1366735864941</created>
       <updated>1366735864941</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added bluecove api">
+      <created>1366767435356</created>
+      <updated>1366767435357</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -492,7 +516,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TwoWaySerialComm with a SerialWriter implementation and test class.  Still yet to be tested and SerialReader still needs to be tailored to this specific project." />
+    <option name="LAST_COMMIT_MESSAGE" value="added bluecove api" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -511,6 +535,7 @@
     <MESSAGE value="Created four classes to be used for Java side programming.  RxTx class is still to be added." />
     <MESSAGE value="Added rxtx jars and dlls" />
     <MESSAGE value="Added TwoWaySerialComm with a SerialWriter implementation and test class.  Still yet to be tested and SerialReader still needs to be tailored to this specific project." />
+    <MESSAGE value="added bluecove api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -520,13 +545,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/TwoWaySerialComm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="65" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0">
@@ -573,7 +591,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XboxControllerJavadoc.url">
+    <entry file="file://$PROJECT_DIR$/javadoc/XboxControllerJavadoc.url">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -622,17 +640,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/intel/bluetooth/BluetoothRFCommConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="17" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.41450778">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/BlueCoveComm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="250" selection-end="250" vertical-scroll-proportion="0.33678755">
-          <folding />
+        <state line="29" column="5" selection-start="758" selection-end="758" vertical-scroll-proportion="0.7512953">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -693,6 +722,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
