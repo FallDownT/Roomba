@@ -16,13 +16,12 @@ public class BlueCoveComm {
     public static void main(String args[]) {
 
         try {
-
-            StreamConnection conn = (StreamConnection) Connector.open("btspp://need_this:1");
+            StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");
 
             PrintStream out = new PrintStream(
                     conn.openOutputStream());
 
-            out.println("A1B1");
+            out.println("A1");
 
             conn.close();
         } catch (IOException e) {
