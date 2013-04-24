@@ -66,6 +66,7 @@ public class RoombaView {
         frame.setResizable(false);
 
         dPanel.setPoint(27, 270, 125);
-        dPanel.setPoint(58, 600, 250);
+        dPanel.setPoint(58, 580, 250);
+        dPanel.setPoint(28, 280, 130);
     }
 }

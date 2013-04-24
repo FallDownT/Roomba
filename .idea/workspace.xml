@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" name="Default" comment="A preliminary GUI with field of vision.  Still need to add arrows and bluetooth communication.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowDownGray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowDownGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowGray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowLeftGray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowLeftGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowOriginal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowRightGray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowRightGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowUpGray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/Images/arrowUpGreen.png" />
+    <list default="true" id="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roomba.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366835560961" ignored="false" />
+    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366837550496" ignored="false" />
     <file path="/testClass.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366658985204" ignored="false" />
     <file path="/fragment.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366815635265" ignored="false" />
     <file path="/TwoWaySerialComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366739720185" ignored="false" />
     <file path="/BlueCoveComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366766980975" ignored="false" />
     <file path="/RoombaMain.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366809366039" ignored="false" />
     <file path="/RoombaController.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366809355519" ignored="false" />
-    <file path="/RoombaView.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366832380822" ignored="false" />
+    <file path="/RoombaView.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366837626086" ignored="false" />
     <file path="/RoombaModel.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366808725782" ignored="false" />
     <file path="/DrawingPanel.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366833128493" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,19 +104,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoombaView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RoombaView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="30" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+            <state line="69" column="35" selection-start="2713" selection-end="2713" vertical-scroll-proportion="1.3880597">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawingPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DrawingPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/DrawingPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="61" selection-start="763" selection-end="763" vertical-scroll-proportion="0.38734177">
+            <state line="78" column="61" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,8 +149,8 @@
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaModel.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaController.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" />
-        <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/DrawingPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
       </list>
     </option>
   </component>
@@ -462,7 +452,15 @@
       <created>1366835503127</created>
       <updated>1366835503127</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add arrows png files generated by Photoshop.">
+      <created>1366835611829</created>
+      <updated>1366835611829</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Arrows have been implemented in GUI.  Still needs  Bluetooth communication.">
+      <created>1366837554838</created>
+      <updated>1366837554838</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -487,9 +485,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -502,8 +500,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20681818" sideWeight="0.67145133" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42424244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20681818" sideWeight="0.57575756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42424244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -553,7 +551,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="A preliminary GUI with field of vision.  Still need to add arrows and bluetooth communication." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arrows have been implemented in GUI.  Still needs  Bluetooth communication." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -573,6 +571,8 @@
     <MESSAGE value="Added rxtx jars and dlls" />
     <MESSAGE value="Added TwoWaySerialComm with a SerialWriter implementation and test class.  Still yet to be tested and SerialReader still needs to be tailored to this specific project." />
     <MESSAGE value="A preliminary GUI with field of vision.  Still need to add arrows and bluetooth communication." />
+    <MESSAGE value="Add arrows png files generated by Photoshop." />
+    <MESSAGE value="Arrows have been implemented in GUI.  Still needs  Bluetooth communication." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -655,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="47" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="51" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
@@ -676,19 +669,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="30" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+        <state line="3" column="47" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/DrawingPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="61" selection-start="763" selection-end="763" vertical-scroll-proportion="0.38734177">
+        <state line="78" column="61" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="35" selection-start="2713" selection-end="2713" vertical-scroll-proportion="1.3880597">
+          <folding />
         </state>
       </provider>
     </entry>
