@@ -12,11 +12,7 @@ public class DrawingPanel extends JPanel {
     int numPoints, numParams;
     double[][] points;
     double[][] fieldOfVision;
-    double[][] upArrowPoints;
-    double[][] downArrowPoints;
-    double[][] leftArrowPoints;
-    double[][] rightArrowPoints;
-    GeneralPath fovConnect, pointConnect, upArrow, downArrow, leftArrow, rightArrow;
+    GeneralPath fovConnect, pointConnect;
 
     /**
      * Default constructor which assigns points.
@@ -29,10 +25,6 @@ public class DrawingPanel extends JPanel {
 
         fovConnect = new GeneralPath();
         pointConnect = new GeneralPath();
-        upArrow = new GeneralPath();
-        downArrow = new GeneralPath();
-        leftArrow = new GeneralPath();
-        rightArrow = new GeneralPath();
 
         // Create all points
         for (int i = 0; i < 2 * numPoints; i++) {
@@ -80,9 +72,6 @@ public class DrawingPanel extends JPanel {
         pointConnect.closePath();       // Close path
         g2.setColor(Color.DARK_GRAY);   // Set color of Fill to Gray
         g2.fill(pointConnect);          // Fill the shape
-
-        // Draw up arrow
-        //upArrow.moveTo();
 
         // Draw and fill Robot Rectangle
         g2.setColor(Color.RED);
