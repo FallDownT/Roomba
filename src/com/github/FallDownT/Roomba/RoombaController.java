@@ -1,11 +1,36 @@
 package com.github.FallDownT.Roomba;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Chris
- * Date: 4/22/13
- * Time: 4:17 PM
- * To change this template use File | Settings | File Templates.
+ * Manages the interaction between the view and the user through the model equations
  */
 public class RoombaController {
+
+    private RoombaModel model;
+    private RoombaView view;
+
+    /**
+     * Default constructor.
+     */
+    public RoombaController() {
+        model = new RoombaModel();
+        view = new RoombaView();
+    }
+
+    /**
+     * Overloaded constructor.
+     *
+     * @param m RoombaModel Object to use.
+     * @param v RoombaView Object to use.
+     */
+    public RoombaController(RoombaModel m, RoombaView v) {
+        model = m;
+        view = v;
+    }
+
+    /**
+     * Controls and manages the MVC implementation.
+     */
+    public void control() {
+
+    }
 }
