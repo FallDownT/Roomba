@@ -10,6 +10,7 @@
     <orderEntry type="library" name="jaw" level="project" />
     <orderEntry type="library" name="XboxController" level="project" />
     <orderEntry type="library" name="RXTXcomm" level="project" />
+    <orderEntry type="library" name="bluecove-2.1.0" level="project" />
   </component>
 </module>
 
