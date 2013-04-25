@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 
 /**
- * Roomba controller combined with bluetooth controller.
+ * Controls the Roomba system by interfacing between the user and the RoombaView.
  */
 public class bluetoothControl {
 
@@ -22,6 +22,12 @@ public class bluetoothControl {
     private String motor1, motor2;
     private RoombaView view;
 
+    /**
+     * Overloaded constructor which initializes data members and the GUI.
+     *
+     * @param v The RoombaView object to assign.
+     * @throws IOException Bad IO.
+     */
     public bluetoothControl(RoombaView v) throws IOException {
         StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");
 
@@ -34,6 +40,10 @@ public class bluetoothControl {
         view = v;
     }
 
+    /**
+     * Method which verifies a connected controller and instantiates the bluetooth listener and the controller listener.
+     * This method controls essentially controls the system after initialization.
+     */
     public void control() {
         XboxController controller = new XboxController("C:\\Users\\ulab\\IdeaProjects\\xboxcontrollertest\\src\\xboxcontroller.dll", 1, 50, 50);
 
@@ -49,6 +59,10 @@ public class bluetoothControl {
         } else {
             System.out.println("*Controller Connected*");
         }
+
+        view.getDrawingPanel().setPoint(15, 150, 288);
+        view.getDrawingPanel().setPoint(31, 310, 100);
+        view.getDrawingPanel().setPoint(14, 140, 260);
 
         controller.addXboxControllerListener(new XboxControllerAdapter() {
             public void isConnected(boolean b) {

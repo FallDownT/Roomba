@@ -4,10 +4,13 @@ import javax.swing.*;
 import java.io.IOException;
 
 /**
- * Creates the Roomba controller and passes it a model and view
+ * Class containing the main method.  No other function.
  */
 public class RoombaMain {
 
+    /**
+     * Creates the bluetoothControl and passes it a RoombaView.
+     */
     public static void main(String args[]) {
 
         SwingUtilities.invokeLater(new Runnable() {
@@ -23,6 +26,7 @@ public class RoombaMain {
                     controller.control();
 
                 } catch (IOException e) {
+                    System.out.println("Bad IO Bro!");
                     e.printStackTrace();
                 }
             }

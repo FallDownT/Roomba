@@ -64,9 +64,14 @@ public class RoombaView {
 
         frame.setContentPane(workPanel);
         frame.setResizable(false);
+    }
 
-        dPanel.setPoint(27, 270, 125);
-        dPanel.setPoint(58, 580, 250);
-        dPanel.setPoint(28, 280, 130);
+    /**
+     * Returns the Drawing Panel used in this RoombaView.
+     *
+     * @return DrawingPanel used in this RoombaView;
+     */
+    public DrawingPanel getDrawingPanel() {
+        return dPanel;
     }
 }

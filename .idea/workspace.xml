@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" name="Default" comment="Merged bluetooth controller and Roomba GUI in RoombaView.  Deleted unnecessary libraries and files which are no longer being used such as:&#10;RoombaController&#10;RoombaModel&#10;TwoWaySerialComm&#10;libraries\RXTXcomm&#10;jars\RXTXcomm&#10;dll\rxtxParallel&#10;dll\rxtxSerial">
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\.idea\libraries\RXTXcomm.xml" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\dll\rxtxParallel.dll" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\dll\rxtxSerial.dll" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\jars\RXTXcomm.jar" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\src\com\github\FallDownT\Roomba\RoombaController.java" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\src\com\github\FallDownT\Roomba\RoombaModel.java" afterPath="" />
-      <change type="DELETED" beforePath="B:\Chris\IdeaProjects\Roomba\src\com\github\FallDownT\Roomba\TwoWaySerialComm.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Roomba.iml" afterPath="$PROJECT_DIR$/Roomba.iml" />
+    <list default="true" id="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" name="Default" comment="Added getDrawingPanel method to RoombaView.  Shifted control over modifying points from RoombaView to bluetoothControl.  Updated Javadocs in bluetoothControl and RoombaMain.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/bluetoothControl.java" afterPath="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/bluetoothControl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Roomba.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366848091418" ignored="false" />
+    <file path="/Dummy.txt" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366849195425" ignored="false" />
     <file path="/testClass.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366658985204" ignored="false" />
-    <file path="/fragment.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366847034175" ignored="false" />
+    <file path="/fragment.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366849186387" ignored="false" />
     <file path="/TwoWaySerialComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366739720185" ignored="false" />
     <file path="/BlueCoveComm.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366766980975" ignored="false" />
-    <file path="/RoombaMain.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366846772698" ignored="false" />
+    <file path="/RoombaMain.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366849006902" ignored="false" />
     <file path="/RoombaController.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366809355519" ignored="false" />
-    <file path="/RoombaView.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366837626086" ignored="false" />
+    <file path="/RoombaView.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366848801218" ignored="false" />
     <file path="/RoombaModel.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366808725782" ignored="false" />
     <file path="/DrawingPanel.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366833128493" ignored="false" />
-    <file path="/bluetoothControl.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366847411458" ignored="false" />
+    <file path="/bluetoothControl.java" changelist="ade4e6d9-b4d6-4a1e-9331-ef7bb83194b0" time="1366848911928" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +80,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoombaMain.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RoombaMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="40" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6322795">
+            <state line="28" column="51" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#342#857#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,7 +96,7 @@
       <file leaf-file-name="bluetoothControl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/bluetoothControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+            <state line="63" column="52" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoombaView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RoombaView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="72" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+            <state line="65" column="34" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.76455694">
               <folding />
             </state>
           </provider>
@@ -143,9 +138,9 @@
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaModel.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaController.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/DrawingPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/bluetoothControl.java" />
         <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java" />
+        <option value="$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java" />
       </list>
     </option>
   </component>
@@ -346,22 +341,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TwoWaySerialComm" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.github.FallDownT.Roomba.TwoWaySerialComm" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Roomba" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="RoombaMain" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.github.FallDownT.Roomba.RoombaMain" />
       <option name="VM_PARAMETERS" value="" />
@@ -378,9 +357,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.TwoWaySerialComm" />
-      <item index="1" class="java.lang.String" itemvalue="Application.RoombaMain" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.RoombaMain" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -456,7 +434,11 @@
       <created>1366839892880</created>
       <updated>1366839892880</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merged bluetooth controller and Roomba GUI in RoombaView.  Deleted unnecessary libraries and files which are no longer being used such as:&#10;RoombaController&#10;RoombaModel&#10;TwoWaySerialComm&#10;libraries\RXTXcomm&#10;jars\RXTXcomm&#10;dll\rxtxParallel&#10;dll\rxtxSerial">
+      <created>1366848154078</created>
+      <updated>1366848154078</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -492,7 +474,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -547,7 +529,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged bluetooth controller and Roomba GUI in RoombaView.  Deleted unnecessary libraries and files which are no longer being used such as:&#10;RoombaController&#10;RoombaModel&#10;TwoWaySerialComm&#10;libraries\RXTXcomm&#10;jars\RXTXcomm&#10;dll\rxtxParallel&#10;dll\rxtxSerial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getDrawingPanel method to RoombaView.  Shifted control over modifying points from RoombaView to bluetoothControl.  Updated Javadocs in bluetoothControl and RoombaMain." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -571,6 +553,7 @@
     <MESSAGE value="Arrows have been implemented in GUI.  Still needs  Bluetooth communication." />
     <MESSAGE value="added bluetoothControl class. uses the xboxcontroller api as well as the bluecove api." />
     <MESSAGE value="Merged bluetooth controller and Roomba GUI in RoombaView.  Deleted unnecessary libraries and files which are no longer being used such as:&#10;RoombaController&#10;RoombaModel&#10;TwoWaySerialComm&#10;libraries\RXTXcomm&#10;jars\RXTXcomm&#10;dll\rxtxParallel&#10;dll\rxtxSerial" />
+    <MESSAGE value="Added getDrawingPanel method to RoombaView.  Shifted control over modifying points from RoombaView to bluetoothControl.  Updated Javadocs in bluetoothControl and RoombaMain." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -585,6 +568,8 @@
         <state line="0" column="8" selection-start="8" selection-end="35" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#342#857#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -601,6 +586,8 @@
         <state line="0" column="8" selection-start="8" selection-end="35" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#342#857#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,13 +597,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="72" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1623" column="0" selection-start="68430" selection-end="68430" vertical-scroll-proportion="0.33333334">
@@ -624,21 +604,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="51" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#342#857#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/bluetoothControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+        <state line="63" column="52" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaMain.java">
+    <entry file="file://$PROJECT_DIR$/src/com/github/FallDownT/Roomba/RoombaView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="687" selection-end="687" vertical-scroll-proportion="0.6322795">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="65" column="34" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.76455694">
+          <folding />
         </state>
       </provider>
     </entry>
