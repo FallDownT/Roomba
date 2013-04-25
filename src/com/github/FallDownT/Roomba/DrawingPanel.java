@@ -40,8 +40,8 @@ public class DrawingPanel extends JPanel {
             }
             points[i][0] = 320 + 319 * getX(1, angle);
             points[i][1] = 320 - 319 * getY(1, angle);
-            System.out.println("FOV   " + i + ": (" + fieldOfVision[i][0] + "," + fieldOfVision[i][1] + ")  \tangle = " + angle);
-            System.out.println("Point " + i + ": (" + points[i][0] + "," + points[i][1] + ")  \tangle = " + angle);
+//            System.out.println("FOV   " + i + ": (" + fieldOfVision[i][0] + "," + fieldOfVision[i][1] + ")  \tangle = " + angle);
+//            System.out.println("Point " + i + ": (" + points[i][0] + "," + points[i][1] + ")  \tangle = " + angle);
         }
 
     }

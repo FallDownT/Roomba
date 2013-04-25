@@ -13,7 +13,7 @@ import java.io.PrintStream;
 /**
  * Controls the Roomba system by interfacing between the user and the RoombaView.
  */
-public class bluetoothControl {
+public class bluetoothControl implements BluetoothObserver {
 
     private PrintStream transmit;
     private BufferedReader receive;
@@ -37,7 +37,24 @@ public class bluetoothControl {
         motor2dir = 0;
         motor1 = null;
         motor2 = null;
+        (new Thread(new BluetoothReader(receive, this))).start();   // Start the BluetoothReader thread
         view = v;
+    }
+
+    /**
+     * Use incPacket of bytes to update the xCoord and yCoord.
+     *
+     * @param incPacket Array of data with size of 4.  Data is {'A', angle, angleIndex, radius}.
+     */
+    @Override
+    public void update(byte[] incPacket) {
+        int angle = incPacket[1];
+        int angleIndex = incPacket[2];
+        int radius = incPacket[3];
+        double xCoord = view.getDrawingPanel().getX(radius, angle);
+        double yCoord = view.getDrawingPanel().getY(radius, angle);
+        System.out.println("incPacket = " + incPacket.toString() + "\t Coordinate " + angleIndex + " = (" + xCoord + ", " + yCoord + ")");
+        view.getDrawingPanel().setPoint(angleIndex, (int) xCoord, (int) yCoord);
     }
 
     /**
@@ -59,6 +76,7 @@ public class bluetoothControl {
         } else {
             System.out.println("*Controller Connected*");
         }
+
 
         view.getDrawingPanel().setPoint(15, 150, 288);
         view.getDrawingPanel().setPoint(31, 310, 100);
