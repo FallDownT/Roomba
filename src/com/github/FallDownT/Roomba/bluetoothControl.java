@@ -29,7 +29,8 @@ public class bluetoothControl implements BluetoothObserver {
      * @throws IOException Bad IO.
      */
     public bluetoothControl(RoombaView v) throws IOException {
-        StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");
+        StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");          //ece5
+//        StreamConnection conn = (StreamConnection) Connector.open("btspp://00a0961009d2:1");         //roomba
 
         transmit = new PrintStream(conn.openOutputStream());
         receive = new BufferedReader(new InputStreamReader(conn.openInputStream()));
