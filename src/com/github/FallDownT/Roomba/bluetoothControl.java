@@ -16,7 +16,7 @@ import java.io.PrintStream;
 public class bluetoothControl implements BluetoothObserver {
 
     private PrintStream transmit;
-    private boolean connected;
+    private boolean connected, notBusy;
     private double motor1dir, motor2dir, leftStickMag, rightStickMag;
     private int motorBase, motor1Offset, motor2Offset, motor1Mag, motor2Mag;
     private String motor1, motor2;
@@ -36,6 +36,7 @@ public class bluetoothControl implements BluetoothObserver {
         BufferedReader receive = new BufferedReader(new InputStreamReader(conn.openInputStream()));
         motor1dir = motor2dir = leftStickMag = rightStickMag = 0;
         motor1 = motor2 = null;
+        notBusy = true;
         motorBase = motor1Offset = motor2Offset = motor1Mag = motor2Mag = 0;
         (new Thread(new BluetoothReader(receive, this))).start();   // Start the BluetoothReader thread
         view = v;
@@ -53,7 +54,7 @@ public class bluetoothControl implements BluetoothObserver {
         double radius = (1 - (incPacket[2] / 127.0)) * 320;
         double xCoord = 320 + view.getDrawingPanel().getX(radius, angle);
         double yCoord = 320 - view.getDrawingPanel().getY(radius, angle);
-//        view.getDrawingPanel().setPoint((int) angleIndex, (int) xCoord, (int) yCoord);
+        view.getDrawingPanel().setPoint((int) angleIndex, (int) xCoord, (int) yCoord);
         view.getDrawingPanel().repaint();
 
         // Debug statements
@@ -94,31 +95,47 @@ public class bluetoothControl implements BluetoothObserver {
             }
 
             public void leftThumbDirection(double direction) {
-                motor1dir = direction;
-                recalcSpeed();
-                recalcTurn();
-                transmitToMotors();
+                if (notBusy) {
+                    notBusy = false;
+                    motor1dir = direction;
+                    recalcSpeed();
+                    recalcTurn();
+                    transmitToMotors();
+                    notBusy = true;
+                }
             }
 
             public void rightThumbDirection(double direction) {
-                motor2dir = direction;
-                recalcSpeed();
-                recalcTurn();
-                transmitToMotors();
+                if (notBusy) {
+                    notBusy = false;
+                    motor2dir = direction;
+                    recalcSpeed();
+                    recalcTurn();
+                    transmitToMotors();
+                    notBusy = true;
+                }
             }
 
             public void leftThumbMagnitude(double magnitude) {
-                leftStickMag = magnitude;
-                recalcSpeed();
-                recalcTurn();
-                transmitToMotors();
+                if (notBusy) {
+                    notBusy = false;
+                    leftStickMag = magnitude;
+                    recalcSpeed();
+                    recalcTurn();
+                    transmitToMotors();
+                    notBusy = true;
+                }
             }
 
             public void rightThumbMagnitude(double magnitude) {
-                rightStickMag = magnitude;
-                recalcSpeed();
-                recalcTurn();
-                transmitToMotors();
+                if (notBusy) {
+                    notBusy = false;
+                    rightStickMag = magnitude;
+                    recalcSpeed();
+                    recalcTurn();
+                    transmitToMotors();
+                    notBusy = true;
+                }
             }
 
             public void buttonA(boolean pressed) {
