@@ -26,7 +26,7 @@ public class BluetoothReader implements Runnable {
     @Override
     public void run() {
         char[] buffer;
-        byte[] packet = new byte[4];
+        byte[] packet = new byte[3];
         int len;
         char inChar;
         String inString;
@@ -37,7 +37,7 @@ public class BluetoothReader implements Runnable {
                 if ((len = reader.read(buffer)) > -1) {
                     inString = new String(buffer, 0, len);
                     inChar = (len > 0) ? inString.charAt(0) : '@';
-                    if (i == 3) {
+                    if (i == 2) {
                         packet[i] = (byte) inChar;
                         i = 0;
                         observer.update(packet);    // Send Packets

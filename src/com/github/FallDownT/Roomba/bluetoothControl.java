@@ -49,16 +49,17 @@ public class bluetoothControl implements BluetoothObserver {
      */
     @Override
     public void update(byte[] incPacket) {
-        int angle = incPacket[1];
-        int angleIndex = incPacket[2];
-        int radius = incPacket[3];
+        double angleIndex = (incPacket[1] + 128) / 4;
+        double angle = Math.PI - (Math.PI * angleIndex / 63);
+        double radius = (1 - (incPacket[2] / 127)) * 320;
         double xCoord = view.getDrawingPanel().getX(radius, angle);
         double yCoord = view.getDrawingPanel().getY(radius, angle);
-//        view.getDrawingPanel().setPoint(angleIndex, (int) xCoord, (int) yCoord);
+//        view.getDrawingPanel().setPoint((int) angleIndex, (int) xCoord, (int) yCoord);
 
         // Debug statements
-        System.out.println("Coordinate " + angleIndex + " = (" + xCoord + ", " + yCoord + ")");
-        System.out.println("\tincPacket[0] = " + incPacket[0] + "\tincPacket[1] = " + incPacket[1] + "\tincPacket[2] = " + incPacket[2] + "\tincPacket[3] = " + incPacket[3]);
+        System.out.println("incPacket[0] = " + incPacket[0] + "\tincPacket[1] = " + incPacket[1] + "\tincPacket[2] = " + incPacket[2]);
+        System.out.println("\tRadius = " + radius + "\tAngleIndex = " + angleIndex + "\tAngle = " + angle);
+        System.out.println("\tCoordinate " + angleIndex + " = (" + xCoord + ", " + yCoord + ")");
     }
 
     /**
@@ -216,23 +217,23 @@ public class bluetoothControl implements BluetoothObserver {
                     if (rightStickMag > 0.80) {
                         motor1Offset = -2;
                         motor2Offset = 2;
-                        view.setArrowLight("left", false);
-                        view.setArrowLight("right", true);
+                        view.setArrowLight("left", true);
+                        view.setArrowLight("right", false);
                     } else if (rightStickMag > 0.60) {
                         motor1Offset = -1;
                         motor2Offset = 2;
-                        view.setArrowLight("left", false);
-                        view.setArrowLight("right", true);
+                        view.setArrowLight("left", true);
+                        view.setArrowLight("right", false);
                     } else if (rightStickMag > 0.40) {
                         motor1Offset = -1;
                         motor2Offset = 1;
-                        view.setArrowLight("left", false);
-                        view.setArrowLight("right", true);
+                        view.setArrowLight("left", true);
+                        view.setArrowLight("right", false);
                     } else if (rightStickMag > 0.20) {
                         motor1Offset = 0;
                         motor2Offset = 1;
-                        view.setArrowLight("left", false);
-                        view.setArrowLight("right", true);
+                        view.setArrowLight("left", true);
+                        view.setArrowLight("right", false);
                     } else if (rightStickMag <= 0.20) {
                         motor1Offset = 0;
                         motor2Offset = 0;
@@ -243,23 +244,23 @@ public class bluetoothControl implements BluetoothObserver {
                     if (rightStickMag > 0.80) {
                         motor1Offset = 2;
                         motor2Offset = -2;
-                        view.setArrowLight("left", true);
-                        view.setArrowLight("right", false);
+                        view.setArrowLight("left", false);
+                        view.setArrowLight("right", true);
                     } else if (rightStickMag > 0.60) {
                         motor1Offset = 2;
                         motor2Offset = -1;
-                        view.setArrowLight("left", true);
-                        view.setArrowLight("right", false);
+                        view.setArrowLight("left", false);
+                        view.setArrowLight("right", true);
                     } else if (rightStickMag > 0.40) {
                         motor1Offset = 1;
                         motor2Offset = -1;
-                        view.setArrowLight("left", true);
-                        view.setArrowLight("right", false);
+                        view.setArrowLight("left", false);
+                        view.setArrowLight("right", true);
                     } else if (rightStickMag > 0.20) {
                         motor1Offset = 1;
                         motor2Offset = 0;
-                        view.setArrowLight("left", true);
-                        view.setArrowLight("right", false);
+                        view.setArrowLight("left", false);
+                        view.setArrowLight("right", true);
                     } else if (rightStickMag <= 0.20) {
                         motor1Offset = 0;
                         motor2Offset = 0;
