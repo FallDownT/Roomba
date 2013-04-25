@@ -74,4 +74,34 @@ public class RoombaView {
     public DrawingPanel getDrawingPanel() {
         return dPanel;
     }
+
+    public void setArrowLight(String arrowDir, boolean illuminated) {
+        if (arrowDir.equalsIgnoreCase("up")) {
+            if (illuminated) {
+                upArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowUpGreen.png")));
+            } else {
+                upArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowUpGray.png")));
+            }
+        } else if (arrowDir.equalsIgnoreCase("down")) {
+            if (illuminated) {
+                downArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowDownGreen.png")));
+            } else {
+                downArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowDownGray.png")));
+            }
+        } else if (arrowDir.equalsIgnoreCase("left")) {
+            if (illuminated) {
+                leftArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowLeftGreen.png")));
+            } else {
+                leftArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowLeftGray.png")));
+            }
+        } else if (arrowDir.equalsIgnoreCase("right")) {
+            if (illuminated) {
+                rightArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowRightGreen.png")));
+            } else {
+                rightArrow.setIcon(new ImageIcon(getClass().getResource("Images/arrowRightGray.png")));
+            }
+        } else {
+            System.out.println("Invalid String parameter, arrowDir");
+        }
+    }
 }

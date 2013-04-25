@@ -53,8 +53,11 @@ public class bluetoothControl implements BluetoothObserver {
         int radius = incPacket[3];
         double xCoord = view.getDrawingPanel().getX(radius, angle);
         double yCoord = view.getDrawingPanel().getY(radius, angle);
-        System.out.println("incPacket = " + incPacket.toString() + "\t Coordinate " + angleIndex + " = (" + xCoord + ", " + yCoord + ")");
-        view.getDrawingPanel().setPoint(angleIndex, (int) xCoord, (int) yCoord);
+//        view.getDrawingPanel().setPoint(angleIndex, (int) xCoord, (int) yCoord);
+
+        // Debug statements
+        System.out.println("Coordinate " + angleIndex + " = (" + xCoord + ", " + yCoord + ")");
+        System.out.println("\tincPacket[0] = " + incPacket[0] + "\tincPacket[1] = " + incPacket[1] + "\tincPacket[2] = " + incPacket[2] + "\tincPacket[3] = " + incPacket[3]);
     }
 
     /**
@@ -103,36 +106,42 @@ public class bluetoothControl implements BluetoothObserver {
 
             public void leftThumbMagnitude(double magnitude) {
 
-                if (motor1dir < 60 || motor1dir > 300)
-                    if (magnitude == 0) {
-                        motor1 = "A4";
-                    } else if (magnitude > 0.80) {
+                if (motor1dir < 60 || motor1dir > 300) {    // Left wheel forward
+                    if (magnitude > 0.80) {
                         motor1 = "A9";
+                        view.setArrowLight("up", true);
                     } else if (magnitude > 0.70) {
                         motor1 = "A8";
+                        view.setArrowLight("up", true);
                     } else if (magnitude > 0.60) {
                         motor1 = "A7";
+                        view.setArrowLight("up", true);
                     } else if (magnitude > 0.40) {
                         motor1 = "A6";
+                        view.setArrowLight("up", true);
                     } else if (magnitude > 0.20) {
                         motor1 = "A5";
-                    } else {
+                        view.setArrowLight("up", true);
+                    } else if (magnitude <= 0.20) {
                         motor1 = "A4";
+                        view.setArrowLight("up", false);
                     }
-
-                else if (motor1dir < 240 || motor1dir > 120) {
-                    if (magnitude == 0) {
-                        motor1 = "A4";
-                    } else if (magnitude > 0.80) {
+                } else if (motor1dir < 240 || motor1dir > 120) {  // Left wheel backward
+                    if (magnitude > 0.80) {
                         motor1 = "A0";
+                        view.setArrowLight("down", true);
                     } else if (magnitude > 0.60) {
                         motor1 = "A1";
+                        view.setArrowLight("down", true);
                     } else if (magnitude > 0.40) {
                         motor1 = "A2";
+                        view.setArrowLight("down", true);
                     } else if (magnitude > 0.20) {
                         motor1 = "A3";
-                    } else {
+                        view.setArrowLight("down", true);
+                    } else if (magnitude <= 0.20) {
                         motor1 = "A4";
+                        view.setArrowLight("down", false);
                     }
 
                 }
@@ -142,36 +151,42 @@ public class bluetoothControl implements BluetoothObserver {
 
             public void rightThumbMagnitude(double magnitude) {
 
-                if (motor2dir < 60 || motor2dir > 300)
-                    if (magnitude == 0) {
-                        motor2 = "B4";
-                    } else if (magnitude > 0.80) {
+                if (motor2dir < 60 || motor2dir > 300) {    // Right wheel moving forward
+                    if (magnitude > 0.80) {
                         motor2 = "B9";
+                        view.setArrowLight("right", true);
                     } else if (magnitude > 0.70) {
                         motor2 = "B8";
+                        view.setArrowLight("right", true);
                     } else if (magnitude > 0.60) {
                         motor2 = "B7";
+                        view.setArrowLight("right", true);
                     } else if (magnitude > 0.40) {
                         motor2 = "B6";
+                        view.setArrowLight("right", true);
                     } else if (magnitude > 0.20) {
                         motor2 = "B5";
-                    } else {
+                        view.setArrowLight("right", true);
+                    } else if (magnitude <= 0.20) {
                         motor2 = "B4";
+                        view.setArrowLight("right", false);
                     }
-
-                else if (motor2dir < 240 || motor2dir > 120) {
-                    if (magnitude == 0) {
-                        motor2 = "B4";
-                    } else if (magnitude > 0.80) {
+                } else if (motor2dir < 240 || motor2dir > 120) {  // Right wheel backward
+                    if (magnitude > 0.80) {
                         motor2 = "B0";
+                        view.setArrowLight("left", true);
                     } else if (magnitude > 0.60) {
                         motor2 = "B1";
+                        view.setArrowLight("left", true);
                     } else if (magnitude > 0.40) {
                         motor2 = "B2";
+                        view.setArrowLight("left", true);
                     } else if (magnitude > 0.20) {
                         motor2 = "B3";
-                    } else {
+                        view.setArrowLight("left", true);
+                    } else if (magnitude <= 0.20) {
                         motor2 = "B4";
+                        view.setArrowLight("left", false);
                     }
 
                 }
