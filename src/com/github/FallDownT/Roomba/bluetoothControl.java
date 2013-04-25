@@ -121,24 +121,19 @@ public class bluetoothControl implements BluetoothObserver {
                     }
 
                 else if (motor1dir < 240 || motor1dir > 120) {
-                        if (magnitude == 0) {
+                    if (magnitude == 0) {
                         motor1 = "A4";
-                        }
-                        else if (magnitude > 0.80){
-                            motor1 = "A0";
-                        }
-                        else if (magnitude > 0.60) {
-                            motor1 = "A1";
-                        }
-                        else if (magnitude > 0.40) {
-                            motor1 = "A2";
-                        }
-                        else if (magnitude > 0.20) {
-                            motor1 = "A3";
-                        }
-                        else {
-                            motor1 = "A4";
-                        }
+                    } else if (magnitude > 0.80) {
+                        motor1 = "A0";
+                    } else if (magnitude > 0.60) {
+                        motor1 = "A1";
+                    } else if (magnitude > 0.40) {
+                        motor1 = "A2";
+                    } else if (magnitude > 0.20) {
+                        motor1 = "A3";
+                    } else {
+                        motor1 = "A4";
+                    }
 
                 }
 
@@ -167,20 +162,15 @@ public class bluetoothControl implements BluetoothObserver {
                 else if (motor2dir < 240 || motor2dir > 120) {
                     if (magnitude == 0) {
                         motor2 = "B4";
-                    }
-                    else if (magnitude > 0.80){
+                    } else if (magnitude > 0.80) {
                         motor2 = "B0";
-                    }
-                    else if (magnitude > 0.60) {
+                    } else if (magnitude > 0.60) {
                         motor2 = "B1";
-                    }
-                    else if (magnitude > 0.40) {
+                    } else if (magnitude > 0.40) {
                         motor2 = "B2";
-                    }
-                    else if (magnitude > 0.20) {
+                    } else if (magnitude > 0.20) {
                         motor2 = "B3";
-                    }
-                     else {
+                    } else {
                         motor2 = "B4";
                     }
 
