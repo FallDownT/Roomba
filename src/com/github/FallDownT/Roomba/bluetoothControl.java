@@ -16,7 +16,6 @@ import java.io.PrintStream;
 public class bluetoothControl implements BluetoothObserver {
 
     private PrintStream transmit;
-    private BufferedReader receive;
     private boolean connected;
     private double motor1dir, motor2dir, leftStickMag, rightStickMag;
     private int motorBase, motor1Offset, motor2Offset, motor1Mag, motor2Mag;
@@ -30,11 +29,11 @@ public class bluetoothControl implements BluetoothObserver {
      * @throws IOException Bad IO.
      */
     public bluetoothControl(RoombaView v) throws IOException {
-//        StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");    // ECE5
-        StreamConnection conn = (StreamConnection) Connector.open("btspp://00a0961009d2:1");    // Roomba
+        StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");    // ECE5
+//        StreamConnection conn = (StreamConnection) Connector.open("btspp://00a0961009d2:1");    // Roomba
 
         transmit = new PrintStream(conn.openOutputStream());
-        receive = new BufferedReader(new InputStreamReader(conn.openInputStream()));
+        BufferedReader receive = new BufferedReader(new InputStreamReader(conn.openInputStream()));
         motor1dir = motor2dir = leftStickMag = rightStickMag = 0;
         motor1 = motor2 = null;
         motorBase = motor1Offset = motor2Offset = motor1Mag = motor2Mag = 0;
@@ -51,10 +50,11 @@ public class bluetoothControl implements BluetoothObserver {
     public void update(byte[] incPacket) {
         double angleIndex = (incPacket[1] + 128) / 4;
         double angle = Math.PI - (Math.PI * angleIndex / 63);
-        double radius = (1 - (incPacket[2] / 127)) * 320;
-        double xCoord = view.getDrawingPanel().getX(radius, angle);
-        double yCoord = view.getDrawingPanel().getY(radius, angle);
+        double radius = (1 - (incPacket[2] / 127.0)) * 320;
+        double xCoord = 320 + view.getDrawingPanel().getX(radius, angle);
+        double yCoord = 320 - view.getDrawingPanel().getY(radius, angle);
 //        view.getDrawingPanel().setPoint((int) angleIndex, (int) xCoord, (int) yCoord);
+        view.getDrawingPanel().repaint();
 
         // Debug statements
         System.out.println("incPacket[0] = " + incPacket[0] + "\tincPacket[1] = " + incPacket[1] + "\tincPacket[2] = " + incPacket[2]);
