@@ -11,37 +11,30 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 
 /**
- * Created with IntelliJ IDEA.
- * User: ulab
- * Date: 4/24/13
- * Time: 5:31 PM
- * To change this template use File | Settings | File Templates.
+ * Roomba controller combined with bluetooth controller.
  */
 public class bluetoothControl {
 
-    PrintStream transmit;
-    BufferedReader receive;
-    boolean connected;
-    double motor1dir = 0;
-    double motor2dir = 0;
-    String motor1 = null;
-    String motor2 = null;
+    private PrintStream transmit;
+    private BufferedReader receive;
+    private boolean connected;
+    private double motor1dir, motor2dir;
+    private String motor1, motor2;
+    private RoombaView view;
 
-    public static void main(String args[]) throws IOException {
-        bluetoothControl btc = new bluetoothControl();
-    }
-
-    public bluetoothControl() throws IOException {
-
+    public bluetoothControl(RoombaView v) throws IOException {
         StreamConnection conn = (StreamConnection) Connector.open("btspp://00A09618B2D3:1");
 
         transmit = new PrintStream(conn.openOutputStream());
-        //BufferedWriter receive = new BufferedWriter(new OutputStreamWriter(conn.openOutputStream()));
         receive = new BufferedReader(new InputStreamReader(conn.openInputStream()));
-        test();
+        motor1dir = 0;
+        motor2dir = 0;
+        motor1 = null;
+        motor2 = null;
+        view = v;
     }
 
-    public void test() {
+    public void control() {
         XboxController controller = new XboxController("C:\\Users\\ulab\\IdeaProjects\\xboxcontrollertest\\src\\xboxcontroller.dll", 1, 50, 50);
 
         if (!controller.isConnected()) {
@@ -183,7 +176,6 @@ public class bluetoothControl {
             public void dpad(int direction, boolean pressed) {
             }
         });
-
 
     }
 }
