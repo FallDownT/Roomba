@@ -183,7 +183,7 @@ public class bluetoothControl implements BluetoothObserver {
                         view.setArrowLight("up", false);
                         view.setArrowLight("down", false);
                     }
-                } else if (motor1dir < 240 || motor1dir > 120) {  // Move backward
+                } else if (motor1dir < 240 && motor1dir > 120) {  // Move backward
                     if (leftStickMag > 0.80) {
                         motorBase = 0;
                         view.setArrowLight("up", false);
@@ -212,7 +212,7 @@ public class bluetoothControl implements BluetoothObserver {
              * Recalculate the motor offsets
              */
             private void recalcTurn() {
-                if (motor2dir < 330 || motor2dir > 210) {    // Turn left
+                if (motor2dir < 330 && motor2dir > 210) {    // Turn left
                     if (rightStickMag > 0.80) {
                         motor1Offset = -2;
                         motor2Offset = 2;
@@ -239,7 +239,7 @@ public class bluetoothControl implements BluetoothObserver {
                         view.setArrowLight("left", false);
                         view.setArrowLight("right", false);
                     }
-                } else if (motor2dir < 150 || motor2dir > 30) {  // Turn right
+                } else if (motor2dir < 150 && motor2dir > 30) {  // Turn right
                     if (rightStickMag > 0.80) {
                         motor1Offset = 2;
                         motor2Offset = -2;
