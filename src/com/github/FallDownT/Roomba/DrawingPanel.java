@@ -12,7 +12,7 @@ public class DrawingPanel extends JPanel {
     int numPoints, numParams;
     double[][] points;
     double[][] fieldOfVision;
-    GeneralPath fovConnect, pointConnect;
+    GeneralPath fovConnect;
 
     /**
      * Default constructor which assigns points.
@@ -24,7 +24,6 @@ public class DrawingPanel extends JPanel {
         fieldOfVision = new double[2 * numPoints][numParams];
 
         fovConnect = new GeneralPath();
-        pointConnect = new GeneralPath();
 
         // Create all points
         for (int i = 0; i < 2 * numPoints; i++) {
@@ -54,6 +53,7 @@ public class DrawingPanel extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        GeneralPath pointConnect = new GeneralPath();
 
         // Draw and fill default robot field of vision
         fovConnect.moveTo(fieldOfVision[0][0], fieldOfVision[0][1]);    // Set starting point

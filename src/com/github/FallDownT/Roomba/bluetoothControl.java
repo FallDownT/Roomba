@@ -55,6 +55,7 @@ public class bluetoothControl implements BluetoothObserver {
         double xCoord = 320 + view.getDrawingPanel().getX(radius, angle);
         double yCoord = 320 - view.getDrawingPanel().getY(radius, angle);
         view.getDrawingPanel().setPoint((int) angleIndex, (int) xCoord, (int) yCoord);
+        view.getDrawingPanel().revalidate();
         view.getDrawingPanel().repaint();
 
         // Debug statements
