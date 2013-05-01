@@ -1,0 +1,144 @@
+
+
+Dim rightmotor As New oDCMotor
+Dim leftmotor As New oDCMotor
+Dim serialL As New oSerialX
+Dim serialR As New oSerialX
+Dim rangetx As New oSerialX
+Dim servotx As New oSerialX
+Dim servo As New oServoX
+Dim i As New oByte
+Dim state As New oNibble
+Dim red As New oLED
+Dim yellow As New oLED
+Dim green As New oLED
+Dim ir As New oA2D
+Dim toggle As New oDIO1
+
+
+
+'Dim wire As New oWire
+'Dim led As New oDIO1
+
+
+
+Sub Main()
+	ooPIC.Delay = 5000
+	Call setup()
+ 
+	Do	
+		
+	
+			
+			servo.Position = i
+			servotx.Value = servo.Position
+			i = i + 4
+			Call updatemotors()
+			rangetx.Value = ir.Result
+			Call updateLEDS()
+			toggle.Toggle = 1
+			
+	Loop
+
+  
+End Sub
+
+Sub updatemotors()
+	rightmotor.Speed = serialR.Value
+	leftmotor.Speed = serialL.Value
+
+End Sub
+
+Sub updateLEDS()
+	If state = 1
+		red.Brightness = 5
+		yellow.Brightness = 5
+		green.Brightness = 15
+		state = 2
+	Else If state = 2
+		red.Brightness = 5
+		yellow.Brightness = 15
+		green.Brightness = 5
+		state = 3	
+	Else If state = 3
+		red.Brightness = 15
+		yellow.Brightness = 5
+		green.Brightness = 5
+		state = 1
+	End If	
+End Sub
+
+
+Sub setup()
+'led.IOLine = 5
+'led.Direction = cvOutput
+'wire.Input.Link(ooPIC.Hz1)
+'wire.Output.Link(led.State)
+'wire.Operate = cvTrue
+
+
+
+	green.IOLine = 5
+	green.Operate = 1
+	yellow.IOLine = 6
+	yellow.Operate = 1
+	red.IOLine = 7
+	red.Operate = 1
+	
+	serialR.Baud = cv9600
+	serialR.IOLineS = 12
+	serialR.IOLineF = 11
+	serialR.InvertF = 1
+	serialR.Init
+	serialR.Operate = 1
+	
+	serialL.Baud = cv9600
+	serialL.IOLineS = 10
+	serialL.IOLineF = 9
+	serialL.InvertF = 1
+	serialL.Init
+	serialL.Operate = 1
+	
+	rangetx.Baud = cv9600
+	rangetx.IOLineS = 14
+	rangetx.IOLineF = 0
+	rangetx.Init
+	rangetx.Operate = 1
+	
+	servotx.Baud = cv9600
+	servotx.IOLineS = 13
+	servotx.IOLineF = 0
+	servotx.Init
+	servotx.Operate = 1
+
+
+	rightmotor.IOLineP = 18
+	rightmotor.IOLineB = 24
+	rightmotor.IOLineD = 26
+	rightmotor.Operate = 1
+	rightmotor.Brake = 0
+	rightmotor.Invert = 1
+	rightmotor.Init
+
+	leftmotor.IOLineP = 17
+	leftmotor.IOLineB = 25
+	leftmotor.IOLineD = 27
+	leftmotor.Operate = 1
+	leftmotor.Brake = 0
+	leftmotor.Init
+	
+	servo.Center=0
+	servo.InvertOut=0
+	servo.IOLine=8
+	servo.Mode=0
+	servo.Operate=1
+	i = -128
+	state = 1
+	
+	ir.IOLine = 1
+	ir.Operate = cvTrue
+	
+	toggle.IOLine = 15
+	toggle.State = 1
+
+End Sub
